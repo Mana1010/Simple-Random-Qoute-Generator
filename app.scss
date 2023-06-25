@@ -1,0 +1,102 @@
+@import 'inventory';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+body{
+    background-color:rgb(9, 28, 33);
+}
+.main{
+    @include flexGroup('column');
+    height: 100vh;
+.homepage{
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    border-radius: 5px;
+.header{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+> button{
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+}
+// Home Section
+.qoutesbox{
+    @include flexGroup('column');
+    height: 100%;
+.name{
+    @include flexGroup('row');
+    height: 60%;
+    margin-inline: 10px;
+> p{
+    font-size: 1.3rem;
+    text-indent: 5px;
+&::first-letter{
+    color: $primary;
+    font-size: 50px;
+}
+}
+}
+.button-home{
+    @include flexGroup('row');
+    gap: 10px;
+.generate, .favorite{
+    background-color: $primary;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    
+
+}
+}
+}
+.favor{
+    margin-inline: 7px;
+    max-height: 230px;
+    overflow-y: auto;
+    margin-block-start: 10px;
+.add-favorite{
+    color: lighten($color: #000000, $amount: 70%);
+    text-align: center;
+}
+> ul{
+  list-style: none;
+> li{
+    border: none;
+    border-bottom: 2px solid black;
+   margin: 10px;
+}
+}
+}
+.about-flex{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+> p{
+    font-size: 23px;
+    margin-inline: 20px;
+    margin-top: 10px;
+}
+> footer{
+    text-align: center;
+    margin-top: 140px;
+    background-color: $primary;
+    padding: 20px;
+> p {
+    color: white;
+}
+}
+}
+.about-none{
+    display: none;
+}
+}
+}
+
